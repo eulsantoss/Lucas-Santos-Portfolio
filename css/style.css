@@ -1,0 +1,379 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+#container {
+    display: grid;
+    grid-template-columns: 99vw;
+    grid-template-rows: auto auto auto;
+    grid-template-areas:
+    "h"
+    "m"
+    "f";
+}
+
+header {
+    grid-area: h;
+    background-color: rgb(29, 29, 29);
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: 1fr;
+    grid-template-areas: "l n c";
+}
+
+main {
+    grid-area: m;
+}
+
+footer {
+    grid-area: f;
+    background-color: rgb(29, 29, 29);
+    color: #fff;
+    text-align: center;
+}
+
+#logo {
+    grid-area: l;
+    justify-self: right;
+}
+
+#names {
+    margin: 30px;
+    color: #fff;
+    font-size: 23px;
+    letter-spacing: 3px;
+    font-family: monospace;
+    line-height: 30px;
+    transition: transform .2s;
+}
+
+#names:hover {
+    transform: scale(1.1);
+}
+
+nav {
+    grid-area: n;
+    margin: 0 auto;
+}
+
+nav ul {
+    margin: 50px;
+    list-style: none;
+}
+
+nav ul li {
+    display: inline-block;
+    padding: 0 2vw;
+    transition: transform .2s;
+}
+
+nav ul li:hover {
+    transform: scale(1.1);
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-family: sans-serif;
+    font-weight: bold;
+    letter-spacing: 1px;
+    font-size: 15px;
+    
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+    
+}
+
+#contacts {
+    grid-area: c;
+}
+
+#contacts ul {
+    list-style: none;
+    margin: 30px;
+}
+
+#contacts ul li {
+    display: inline-block;
+    margin: 0px 10px;
+}
+
+#contacts ul li a img {
+    width: 55px;
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 30px;
+    transition: transform .2s;
+}
+
+#contacts ul li a img:hover {
+    transform: scale(1.05);
+}
+
+/*Fim do header*/
+
+#m-content {
+    width: 60%;
+    margin: 40px auto;
+}
+
+fieldset {
+    text-align: center;
+    border: none;
+    border-top: 1px solid black;
+    margin: 0 20px;
+}
+
+h2.title {
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: normal;
+    font-size: 35px;
+    color: rgb(41, 41, 41);
+    letter-spacing: 3px;
+}
+
+.box {
+    display: flex;
+    margin-top: 5%;
+    padding: 15px;
+    box-shadow: -5px 8px 10px -5px rgb(180, 180, 180);
+    border-radius: 15px;
+}
+
+.box img {
+    width: 200px;
+    border-radius: 360px;
+}
+
+.box p {
+    align-self: center;
+    margin-left: 3%;
+    padding: 1.5% 0;
+    border-top: 1px solid rgb(156, 156, 156);
+    border-bottom: 1px solid rgb(156, 156, 156);
+    font-size: 17px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: rgb(0, 0, 0);
+}
+
+#cards {
+    margin: 70px 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    column-gap: 25px;
+}
+
+.card {
+    border-radius: 20px;
+    box-shadow: 4px 4px 15px 2px rgb(180, 180, 180);
+    transition: transform .2s;
+}
+
+.card:hover {
+    transform: scale(1.02);
+}
+
+.card h2{
+    text-align: center;
+    padding: 10px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#card-html {
+    background-color: #E45A28;
+}
+
+#card-css {
+    background-color: #4E95BA;
+}
+
+#card-js {
+    background-color: #F1BD44;
+}
+
+.card-content {
+    margin: 0px 15px 15px 15px ;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 20px;
+}
+
+.card-content ul {
+    list-style: circle;
+    margin-left: 10px;
+}
+
+.card-content ul li {
+    margin: 15px 10px;
+    font-size: 17px;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+/* Área dos Cards do Portfolio */
+
+#cards-portfolio {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+    grid-template-areas: 
+    "c1 c2"
+    "c3 c4";
+    text-align: center;
+    column-gap: 70px;
+    row-gap: 70px;
+    margin: 60px 0px;
+}
+
+#cards-portfolio a {
+    text-decoration: none;
+    color: #000;
+}
+
+.card-portfolio {
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 4px 4px 15px 2px rgb(180, 180, 180);
+    transition: transform .2s;
+    min-height: 500px;
+}
+
+.card-portfolio:hover {
+    transform: scale(1.02);
+}
+
+.card-portfolio img {
+    width: 500px;
+    margin: 20px 0px;
+}
+
+.card-portfolio .portfolio-content {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.card-portfolio h2 {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    letter-spacing: 3px;
+    font-size: 25px;
+}
+
+.card-portfolio p {
+    margin: 15px 0px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 17px;
+}
+
+#p-card-1 {
+    grid-area: c1;
+}
+
+#p-card-2 {
+    grid-area: c2;
+}
+
+#p-card-3 {
+    grid-area: c3;
+}
+
+#p-card-4 {
+    grid-area: c4;
+}
+
+.certification-box {
+    box-shadow: 0px 4px 15px -7px rgb(141, 141, 141);
+    margin: 7px 0;
+    transition: transform .2s;
+}
+
+.certification-box:hover {
+    transform: scale(1.005);
+}
+
+#info h2 {
+    margin: 30px 0px;
+}
+
+#info ul {
+    margin: 0 2vw;
+    margin-bottom: 50px;
+}
+
+#contato hr {
+    margin: 0 32%;
+    border: 1vhpx solid rgb(145, 145, 145, .5);
+}
+
+#contact-info p {
+    font-size: 20px;
+    margin: 30px 0;
+    text-align: center;
+}
+
+.contacts-box {
+    box-shadow: none;
+    margin: 1px 0;
+    transition: transform .2s;
+}
+
+.contacts-box:hover {
+    transform: scale(1.005);
+}
+
+.contacts-box a {
+    width: 37%;
+    display: flex;
+    justify-content: left;
+    margin: 0 auto;
+    text-decoration: none;
+}
+
+.contacts-box img {
+    width: 70px;
+    align-self: center;
+}
+
+.contacts-box p {
+    border: none;
+}
+
+/*Botão de voltar ao topo*/
+
+#botao-lateral {
+    width: 60px;
+    height: 60px;
+    position: fixed;
+    right: 1%;
+    bottom: 2%;
+    background-color: rgb(218, 218, 218);
+    transition: 700ms;
+    border-radius: 30px;
+    text-align: center;
+    opacity: 70%;
+}
+
+#botao-lateral:hover {
+    opacity: 100%;
+}
+
+#botao-lateral img {
+    width: 90%;
+    padding: 5px;
+    box-sizing: border-box;
+}
+
+/*Fim do botão de voltar ao topo*/
+
+/* Área do Footer */
+
+footer p {
+    margin: 20px 0;
+}
