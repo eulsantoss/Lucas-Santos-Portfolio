@@ -11,7 +11,7 @@ html {
 
 #container {
     display: grid;
-    grid-template-columns: 99vw;
+    grid-template-columns: 100%;
     grid-template-rows: auto auto auto;
     grid-template-areas:
     "h"
@@ -64,13 +64,13 @@ nav {
 }
 
 nav ul {
-    margin: 50px;
+    margin-top: 45px;
     list-style: none;
 }
 
 nav ul li {
     display: inline-block;
-    padding: 0 2vw;
+    padding: 0 1.5vw;
     transition: transform .2s;
 }
 
@@ -143,13 +143,14 @@ h2.title {
 .box {
     display: flex;
     margin-top: 5%;
-    padding: 15px;
+    padding: .1vw;
     box-shadow: -5px 8px 10px -5px rgb(180, 180, 180);
     border-radius: 15px;
 }
 
 .box img {
-    width: 200px;
+    width: 20%;
+    height: 20%;
     border-radius: 360px;
 }
 
@@ -167,9 +168,9 @@ h2.title {
 #cards {
     margin: 70px 0;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: auto auto auto;
     grid-template-rows: auto;
-    column-gap: 25px;
+    column-gap: 2vw;
 }
 
 .card {
@@ -318,22 +319,54 @@ h2.title {
     text-align: center;
 }
 
+#my-contacts {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-columns: auto auto;
+    grid-template-areas: 
+    "p1 p2 p5"
+    "p3 p4 x";
+    justify-content: center;
+    row-gap: 3vh;
+    column-gap: 1vw;
+    margin-top: 50px;
+}
+
+#whatsapp-area {
+    grid-area: p1;
+}
+
+#instagram-area {
+    grid-area: p2;
+}
+
+#email-area {
+    grid-area: p3;
+}
+
+#linkedin-area {
+    grid-area: p4;
+}
+
+#github-area {
+    grid-area: p5;
+}
+
 .contacts-box {
-    box-shadow: none;
-    margin: 1px 0;
     transition: transform .2s;
+    box-shadow: 0px 3px 5px -5px;
+    border-radius: 15px;
 }
 
-.contacts-box:hover {
-    transform: scale(1.005);
+.contacts-box:hover{
+    transform: scale(1.02);
 }
 
-.contacts-box a {
-    width: 37%;
+.contacts-box a{
     display: flex;
-    justify-content: left;
-    margin: 0 auto;
+    align-items: center;
     text-decoration: none;
+    color: #000;
 }
 
 .contacts-box img {
@@ -342,7 +375,7 @@ h2.title {
 }
 
 .contacts-box p {
-    border: none;
+    margin-left: 5px;
 }
 
 /*Botão de voltar ao topo*/
@@ -377,3 +410,89 @@ h2.title {
 footer p {
     margin: 20px 0;
 }
+
+/* ÁREA DE CORREÇÃO DA RESPONSIVIDADE */
+
+@media screen and (max-width: 1400px) {
+    #about-me {
+        text-align: center;
+        display: block;
+    }
+
+    #about-me img {
+        min-width: 200px;
+    }
+}
+
+@media screen and (max-width: 1150px) {
+    #cards {
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: auto auto auto;
+        grid-template-areas: 
+        "htmlcard"
+        "csscard"
+        "jscard";
+        row-gap: 20px;
+    }
+
+    #card-html {
+        grid-area: htmlcard;
+    }
+
+    #card-css {
+        grid-area: csscard;
+    }
+
+    #card-js {
+        grid-area: jscard;
+    }
+}
+
+@media screen and (max-width: 1090px) {
+    header {
+        display: block;
+        text-align: center;
+    }
+
+    #contacts {
+        display: none;
+    }
+
+    nav ul {
+        margin-bottom: 10px;
+    }
+}
+
+@media screen and (max-width: 850px) {
+    #cards-portfolio {
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: auto auto auto auto;
+        grid-template-areas: 
+        "site1"
+        "site2"
+        "site3"
+        "site4";
+        row-gap: 15px;
+    }
+
+    #my-contacts {
+        display: block;
+        grid-template-columns: auto;
+        grid-template-rows: auto auto auto auto;
+        grid-template-areas: 
+        "section1"
+        "section2"
+        "section3"
+        "section4"
+        "section5";
+        row-gap: 30px;
+    }
+}
+
+/* @media screen and (max-width: 600px) {
+    header nav, #contacts {
+        display: none;
+    }
+} */
