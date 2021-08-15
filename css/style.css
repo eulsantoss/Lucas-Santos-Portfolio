@@ -228,7 +228,8 @@ h2.title {
     grid-template-rows: auto auto;
     grid-template-areas: 
     "c1 c2"
-    "c3 c4";
+    "c3 c4"
+    "c5 c6";
     text-align: center;
     column-gap: 4%;
     row-gap: 4%;
@@ -288,6 +289,10 @@ h2.title {
 
 #p-card-4 {
     grid-area: c4;
+}
+
+#certificaçoes {
+    margin-top: 235px;
 }
 
 .certification-box {
@@ -489,6 +494,14 @@ footer p {
         "section4"
         "section5";
         row-gap: 30px;
+    }
+
+    #certificaçoes {
+        margin-top: 15px;
+    }
+
+    #certificaçoes fieldset {
+        margin-bottom: 50px;
     }
 }
 
